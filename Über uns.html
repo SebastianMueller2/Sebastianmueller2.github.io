@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboarding4KMU – Über uns</title>
+  <meta name="description" content="Problem, Ziel und Lösung von Onboarding4KMU." />
+  <style>
+    :root{--bg:#0b1020;--card:rgba(255,255,255,.06);--stroke:rgba(255,255,255,.12);--text:#eef3ff;--muted:rgba(238,243,255,.72);--accent:#6aa6ff;--accent2:#9b7bff;--r:18px;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(900px 500px at 20% -10%, rgba(106,166,255,.25), transparent 60%),radial-gradient(700px 500px at 90% 10%, rgba(155,123,255,.22), transparent 55%),var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 54px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .chip{border:1px solid var(--stroke);background:rgba(255,255,255,.04);padding:8px 12px;border-radius:999px;font-size:14px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .hero{border:1px solid var(--stroke);background:rgba(255,255,255,.05);border-radius:var(--r);padding:22px}
+    h1{margin:0 0 10px;font-size:clamp(28px,4vw,40px);line-height:1.1}
+    p{margin:0 0 14px;color:var(--muted);line-height:1.65}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{border:1px solid var(--stroke);background:rgba(255,255,255,.04);border-radius:var(--r);padding:18px}
+    .pill{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);font-size:13px;color:var(--muted)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:14px;border:1px solid var(--stroke);background:rgba(255,255,255,.05);font-weight:650}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#061023;border-color:rgba(255,255,255,.18)}
+    footer{margin-top:18px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800;line-height:1.1;">Onboarding4KMU</div>
+          <div style="color:var(--muted);font-size:13px;">Über uns</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <a class="chip" href="index.html">Start</a>
+        <a class="chip" href="ueber-uns.html">Über uns</a>
+        <a class="chip" href="team.html">Team</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <h1>Problem verstehen. Lösung liefern. Onboarding messbar machen.</h1>
+      <p>
+        Auf dieser Seite erklärst du kurz das zentrale Problem und eure Lösung – ideal für Prüfer:innen:
+        klar, strukturiert, nachvollziehbar.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="team.html">Team kennenlernen</a>
+        <a class="btn" href="https://calendly.com/DEIN_CALENDLY/meeting" target="_blank" rel="noreferrer">Termin buchen</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2 style="margin:0 0 10px;">Das Problem</h2>
+        <p>
+          In vielen KMU ist Onboarding nicht standardisiert. Neue Mitarbeitende erhalten Informationen
+          ungleichmäßig, Wissen steckt in Köpfen, Prozesse sind nicht dokumentiert – das führt zu
+          langen Einarbeitungszeiten und Frust.
+        </p>
+        <span class="pill">Auswirkung: Zeitverlust</span>
+        <span class="pill">Auswirkung: Fehlerquote</span>
+        <span class="pill">Auswirkung: Fluktuation</span>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px;">Unsere Lösung</h2>
+        <p>
+          Onboarding4KMU liefert eine klare Struktur: Checklisten, Rollen, Zeitplan und ein zentraler
+          Wissensbereich. So werden Aufgaben transparent, Fortschritt sichtbar und die Einarbeitung
+          planbar.
+        </p>
+        <span class="pill">Baustein: 30/60/90-Tage-Plan</span>
+        <span class="pill">Baustein: zentrale Dokumentation</span>
+        <span class="pill">Baustein: Feedback-Schleifen</span>
+      </div>
+
+      <div class="card" style="grid-column: 1 / -1;">
+        <h2 style="margin:0 0 10px;">So lösen wir es konkret (3 Schritte)</h2>
+        <p><strong>1) Analyse:</strong> Rollen, Aufgaben, vorhandene Unterlagen und Engpässe erfassen.</p>
+        <p><strong>2) Design:</strong> Standardprozess + Checklisten + Vorlagen + Verantwortlichkeiten definieren.</p>
+        <p><strong>3) Umsetzung:</strong> Pilot mit neuen Mitarbeitenden, Feedback einarbeiten, final ausrollen.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Onboarding4KMU</div>
+      <div><a href="index.html" style="text-decoration:underline;">Zur Startseite</a></div>
+    </footer>
+  </div>
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
