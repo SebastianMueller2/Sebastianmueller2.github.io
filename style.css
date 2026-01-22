@@ -350,10 +350,10 @@ section:nth-of-type(even) {
 }
 
 h2.section-title {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     color: var(--text);
 }
 
@@ -368,10 +368,10 @@ h2.section-title {
 
 .section-intro {
     color: var(--text-muted);
-    max-width: 44rem;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 0.8rem;
+    max-width: 46rem;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
 }
 
 /* ===========================
@@ -480,85 +480,111 @@ h2.section-title {
 }
 
 /* ===========================
-   Framework Section
+   Framework Section (VERBESSERT!)
    =========================== */
 
 .framework-grid {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    align-items: start;
 }
 
 .framework-card {
     background: var(--bg-white);
-    border-radius: var(--radius);
-    padding: 2rem 1.8rem;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2.2rem;
     border: 1px solid var(--border);
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .framework-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-light);
 }
 
 .framework-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
 }
 
 .framework-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1rem;
     color: var(--text);
+    line-height: 1.3;
 }
 
 .framework-card > p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    line-height: 1.65;
-    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+    flex-grow: 1;
 }
 
 .framework-list {
     padding-left: 0;
-    margin-top: 1rem;
+    margin-top: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
 }
 
 .framework-list li {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    padding-left: 2rem;
+    margin-bottom: 0.85rem;
     position: relative;
+    line-height: 1.6;
+}
+
+.framework-list li:last-child {
+    margin-bottom: 0;
 }
 
 .framework-list li::before {
-    content: "→";
+    content: "✓";
     position: absolute;
     left: 0;
+    top: 0;
     color: var(--accent);
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 1.1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .framework-cta {
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
-    padding: 2.5rem 2rem;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 3.5rem 2.5rem;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: var(--shadow-sm);
 }
 
 .framework-cta-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     font-weight: 500;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ===========================
@@ -768,6 +794,11 @@ footer .footer-meta {
     .contact-grid {
         grid-template-columns: minmax(0, 1fr);
     }
+
+    .framework-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -793,6 +824,7 @@ footer .footer-meta {
 
     .framework-grid {
         grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
     }
 
     .problem-row {
@@ -805,6 +837,10 @@ footer .footer-meta {
 
     section {
         padding: 3rem 0;
+    }
+
+    h2.section-title {
+        font-size: 1.6rem;
     }
 }
 
@@ -828,5 +864,21 @@ footer .footer-meta {
 
     .btn {
         width: 100%;
+    }
+
+    .framework-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .framework-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .framework-cta {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .framework-cta-text {
+        font-size: 1.05rem;
     }
 }
