@@ -480,127 +480,85 @@ h2.section-title {
 }
 
 /* ===========================
-   Timeline
+   Framework Section
    =========================== */
 
-.timeline {
+.framework-grid {
     margin-top: 2.5rem;
-    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+.framework-card {
     background: var(--bg-white);
-    padding: 1.8rem 1.6rem;
+    border-radius: var(--radius);
+    padding: 2rem 1.8rem;
     border: 1px solid var(--border);
+    transition: var(--transition);
     box-shadow: var(--shadow-sm);
 }
 
-.timeline-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.2rem;
+.framework-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
 }
 
-.timeline-item {
-    position: relative;
-    padding-top: 0.5rem;
+.framework-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.timeline-badge {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-light);
-    font-weight: 600;
-}
-
-.timeline-title {
+.framework-card h3 {
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-top: 0.4rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
     color: var(--text);
 }
 
-.timeline-meta {
-    margin-top: 0.3rem;
+.framework-card > p {
+    font-size: 0.95rem;
     color: var(--text-muted);
-    font-size: 0.8rem;
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
 }
 
-.timeline-status {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.status-done {
-    color: #15803d;
-}
-
-.status-progress {
-    color: #d97706;
-}
-
-.status-planned {
-    color: #6b7280;
-}
-
-/* ===========================
-   Two Column Layout
-   =========================== */
-
-.two-column {
-    margin-top: 2.5rem;
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    gap: 2.5rem;
-    align-items: flex-start;
-}
-
-.two-column h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    color: var(--text);
-}
-
-.list-check {
+.framework-list {
     padding-left: 0;
+    margin-top: 1rem;
 }
 
-.list-check li {
-    font-size: 0.95rem;
-    margin-bottom: 0.6rem;
+.framework-list li {
+    font-size: 0.9rem;
     color: var(--text-muted);
     padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
     position: relative;
 }
 
-.list-check li::before {
-    content: "✓";
+.framework-list li::before {
+    content: "→";
     position: absolute;
     left: 0;
     color: var(--accent);
     font-weight: 700;
 }
 
-.meta-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
+.framework-cta {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
 }
 
-.meta-table tr + tr td {
-    border-top: 1px solid var(--border);
-}
-
-.meta-table td {
-    padding: 0.6rem 0;
-    vertical-align: top;
-}
-
-.meta-label {
-    font-weight: 700;
-    padding-right: 1rem;
-    white-space: nowrap;
+.framework-cta-text {
+    font-size: 1.1rem;
     color: var(--text);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 /* ===========================
@@ -807,11 +765,6 @@ footer .footer-meta {
         order: -1;
     }
 
-    .two-column {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 2rem;
-    }
-
     .contact-grid {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -838,8 +791,8 @@ footer .footer-meta {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .timeline-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .framework-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .problem-row {
@@ -861,10 +814,6 @@ footer .footer-meta {
     }
 
     .feature-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .timeline-row {
         grid-template-columns: minmax(0, 1fr);
     }
 
